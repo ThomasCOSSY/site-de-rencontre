@@ -1,7 +1,5 @@
 <?php
-
 require_once 'index_controller.php';
-
 ?>
 
 <!doctype html>
@@ -22,89 +20,57 @@ require_once 'index_controller.php';
 
   <div class="container-fluid">
     <div class="text-center mt-3">
-      <h1><i class=""></i>Adopte ton dev</h1>
+      <h1><i class=""></i>👨‍💻 Adopte un.e dev 👩‍💻</h1>
     </div>
-
     <div class="d-flex text-white justify-content-center">
-
-      <form enctype="multipart/form-data" action="lovers.php" method="post" class="backGroundForm p-4"> 
-        <div>
-          <label for="name">Nom</label>
-        </div>
-        <div>
-          <input type="text" id="name" name="name" value="<?= isset($_POST['name']) ? $_POST['name'] : '' ?>" placeholder="ex : Doe">
-        </div>
-        <p class="displayMessage">
-          <?= isset($messageError['name']) ? $messageError['name'] : '' ?><?= isset($messageSuccess['name']) ? $messageSuccess['name'] : '' ?>
-        </p>
-        <div>
-          <label for="firstname">Prénom</label>
-        </div>
-        <div>
-          <input type="text" id="firstname" name="firstname" value="<?= (isset($_POST['firstname'])) ? $_POST['firstname'] : '' ?>" placeholder="ex : John">
-        </div>
-        <div class="displayMessage">
-          <?= (isset($messageError['firstname'])) ? $messageError['firstname'] : '' ?><?= isset($messageSuccess['firstname']) ? $messageSuccess['firstname'] : '' ?>
-        </div>
-        <div>
-          <label for="age">Votre âge</label>
-        </div>
-        <div>
-          <input type="text" id="age" name="age" value="<?= (isset($_POST['age'])) ? $_POST['age'] : '' ?>">
-        </div>
-        <div class="displayMessage">
-          <?= (isset($messageError['age'])) ? $messageError['age'] : '' ?><?= isset($messageSuccess['age']) ? $messageSuccess['age'] : '' ?>
-        </div>        
-        <div>
-          <label for="zipcode">Code postal</label>
-        </div>
-        <div>
-          <input type="text" id="zipcode" name="zipcode" value="<?= (isset($_POST['zipcode'])) ? $_POST['zipcode'] : '' ?>" placeholder="75000">
-        </div>
-        <div class="displayMessage">
-          <?= (isset($messageError['zipcode'])) ? $messageError['zipcode'] : '' ?><?= isset($messageSuccess['zipcode']) ? $messageSuccess['zipcode'] : '' ?>
-        </div>
-        <div>
-          <label for="email">Adresse email</label>
-        </div>
-        <div>
-          <input type="eemail" id="email" name="email" value="<?= (isset($_POST['email'])) ? $_POST['email'] : '' ?>" placeholder="exemple@gemail.com">
-        </div>
-        <div class="displayMessage">
-          <?= (isset($messageError['email'])) ? $messageError['email'] : '' ?><?= isset($messageSuccess['email']) ? $messageSuccess['email'] : '' ?>
-        </div>  
-        
-        
-        <div>
-          <label for="gender">Vous êtes :</label>
-        </div>
-        <div class="row">            
-          <input class="optionRadio" type="radio" id="gender" name="gender" value="Homme" <?= isset($_POST['gender']) && $_POST['gender'] == 'Homme' ? 'checked' : '' ?>></input>
-          <label class="alignRadio" for="gender">un Homme</label>
-
-          <input class="optionRadio" type="radio" id="gender" name="gender" value="Femme" <?= isset($_POST['gender']) && $_POST['gender'] == 'Femme' ? 'checked' : '' ?>></input>
-          <label class="alignRadio" for="gender">une Femme</label>
-        </div>
-        <div class="displayMessage">
-          <?= (isset($messageError['gender'])) ? $messageError['gender'] : '' ?>
-        </div>
-              
-        <div>
-          <label for="preference">Vous recherchez :</label>
-        </div>
-        <div class="row">            
-          <input class="optionRadio" type="radio" id="preference" name="preference" value="Homme" <?= isset($_POST['preference']) && $_POST['preference'] == 'Homme' ? 'checked' : '' ?>></input>
-          <label class="alignRadio" for="preference">un Homme</label>
-
-          <input class="optionRadio" type="radio" id="preference" name="preference" value="Femme" <?= isset($_POST['preference']) && $_POST['preference'] == 'Femme' ? 'checked' : '' ?>></input>
-          <label class="alignRadio" for="preference">une Femme</label>
-        </div>
-        <div class="displayMessage">
-          <?= (isset($messageError['preference'])) ? $messageError['preference'] : '' ?>
+      <form action="index.php" method="post" class="backGroundForm p-4" novalidate>
+        <div class="form-group">
+          <span class="text-danger"><?= $errorCheck["name"] ?></span>
+          <label for="name">Nom: </label>
+          <input class="form-control" placeholder="Wonka" type="text" required name="name" value="<?= $userName ?>">
         </div>
 
-          
-        <input class="btnColor mb-5" name="submit" type="submit" value="Rencontrez nos célibataires">
+        <div class="form-group">
+          <span class="text-danger"><?= $errorCheck["firstname"] ?></span>
+          <label for="firstname">Prénom: </label>
+          <input class="form-control" placeholder="Willy" type="text" required name="firstname" value="<?= $userFirstName ?>">
+        </div>
+
+        <div class="form-group">
+          <span class="text-danger"><?= $errorCheck["age"] ?></span>
+          <label for="age">Âge: </label>
+          <input class="form-control" placeholder="18 ou +" type="number" required name="age" value="<?= $userAge ?>">
+        </div>
+
+        <p><span class="text-danger"><?= $errorCheck["gender"] ?></span>Genre:</p>
+        <div class="form-group">
+          <input type="radio" name="gender" value="homme" <?= ($userGender === "homme") ? "checked" : "" ?>>
+          <label for="homme">Homme</label>
+          <input type="radio" name="gender" value="femme" <?= ($userGender === "femme") ? "checked" : "" ?>>
+          <label for="femme">Femme</label>
+        </div>
+
+        <div class="form-group">
+          <span class="text-danger"><?= $errorCheck["zipcode"] ?></span>
+          <label for="zipcode">Code postal: </label>
+          <input class="form-control" placeholder="66666" type="text" required name="zipcode" value="<?= $userZipCode ?>">
+        </div>
+
+        <div class="form-group">
+          <span class="text-danger"><?= $errorCheck["email"] ?></span>
+          <label for="email">E-mail: </label>
+          <input class="form-control" placeholder="willy.wonka@chocolate.com" type="email" required name="email" value="<?= $userEmail ?>">
+        </div>
+
+        <p><span class="text-danger"><?= $errorCheck["preference"] ?></span>Vous recherchez:</p>
+        <div class="form-group">
+          <input type="radio" name="preference" value="homme" <?= ($userPreference === "homme") ? "checked" : "" ?>>
+          <label for="homme">Homme</label>
+          <input type="radio" name="preference" value="femme" <?= ($userPreference === "femme") ? "checked" : "" ?>>
+          <label for="femme">Femme</label>
+        </div>
+
+        <input class="btnColor mb-5" name="submit" type="submit" value="Rencontrez nos célibataires 🌹">
 
       </form>
     </div>

@@ -1,11 +1,28 @@
-let imgManip = document.getElementById("img");
+// Mise en place du système de like 
 
-imgManip.onclick = function (e) {
+let imgManip = document.querySelectorAll("img.img-like");
+
+for (let img of imgManip) {
+    img.onclick = function changeImg (e) {
         e.preventDefault();
-        if (imgManip.src.match("vide")) {
-
-            imgManip.src = "assets/img/coeur_plein.png";
+        if (this.src.match("vide")) {
+            this.src = "assets/img/coeur_plein.png";
         } else {
-            imgManip.src = "assets/img/coeur_vide.png";
+            this.src = "assets/img/coeur_vide.png";
         };
     }
+}
+
+// deuxieme solution :
+// imgManip.forEach(function (img) {
+//     img.onclick = function changeImg(e) {
+//         e.preventDefault();
+//         if (img.src.match("vide")) {
+//             console.log("toto");
+//             img.src = "assets/img/coeur_plein.png";
+//         } else {
+//             console.log("fifi");
+//             img.src = "assets/img/coeur_vide.png";
+//         };
+//     }
+// });

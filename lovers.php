@@ -1,7 +1,5 @@
 <?php
-
-require_once 'index_controller.php';
-
+require_once 'lovers_controller.php';
 ?>
 
 <!doctype html>
@@ -21,7 +19,7 @@ require_once 'index_controller.php';
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Bonjour <?= $securefirstname ?></a>
+  <a class="navbar-brand" href="#">Bonjour <?= $_COOKIE["firstname"]  ?></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -53,7 +51,9 @@ foreach ($catalog as $bachelorNumber => $bachelor) {
 ?>-->
     <div class="row">
         <?php
-        foreach ($catalog as $bachelorNumber => $bachelor) { ?>
+        foreach ($catalog as $bachelorNumber => $bachelor) { 
+            // if ($_COOKIE['preference'] == $bachelor["gender"]){
+                ?>
             <div class="card col-4" style="width: 18rem;">
                 <?= "Célibataire n°" . ($bachelorNumber + 1) . " :<br>"; ?>
                 <img src="assets/img/<?= $bachelor["picture"] ?>" class="card-img-top" alt="<?= $bachelor["firstname"] ?>">
@@ -65,10 +65,10 @@ foreach ($catalog as $bachelorNumber => $bachelor) {
                     
                 </div>
                 <div class="d-flex justify-content-end">
-                <img src="assets/img/coeur_vide.png" id="img" alt="coeur" width="50 rem">
+                <img src="assets/img/coeur_vide.png" class="img-like" alt="coeur" width="50 rem">
                 </div>
             </div>
-        <?php } ?>
+        <?php }} ?>
 
     </div>
 
