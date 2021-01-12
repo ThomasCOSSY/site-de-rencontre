@@ -1,27 +1,5 @@
 <?php
-$br = "<br>";
-
-// Mise en place des cookies
-if ((isset($_POST["name"])) && (isset($_POST["firstname"])) && (isset($_POST["age"])) && (isset($_POST["zipcode"])) && (isset($_POST["email"])) && (isset($_POST["gender"])) && (isset($_POST["preference"]))) {
-    $userName = $_POST["name"];
-    $userFirstName = $_POST["firstname"];
-    $userAge = $_POST["age"];
-    $userZipCode = $_POST["zipcode"];
-    $userEmail = $_POST["email"];
-    $userGender = $_POST["gender"];
-    $userPreference = $_POST["preference"];
-    // Cookie set pour 24h
-    setcookie("name", $userName, time() + 24 * 60 * 60);
-    setcookie("firstname", $userFirstName, time() + 24 * 60 * 60);
-    setcookie("age", $userAge, time() + 24 * 60 * 60);
-    setcookie("zipcode", $userZipCode, time() + 24 * 60 * 60);
-    setcookie("email", $userEmail, time() + 24 * 60 * 60);
-    setcookie("gender", $userGender, time() + 24 * 60 * 60);
-    setcookie("preference", $userPreference, time() + 24 * 60 * 60);
-    // Une fois que les cookies ont été placés, ils seront accessibles lors du prochain chargement de page dans le tableau $_COOKIE:
-    header("Location: user.php");
-}
-
+// Récupération des données saisies via les cookies
 if (isset($_COOKIE["name"])) {
     echo "Nom: " . $_COOKIE["name"] . $br;
 } else {
@@ -65,11 +43,19 @@ if (isset($_COOKIE["preference"])) {
 }
 
 // Suppression des cookies
+
 ?>
 
-<div class="erase-data">
-    <button type="submit" class="btn">:x: Effacer mon profil :x:</button>
-</div>
-<div class="redirect">
-    <button type="submit" class="btn" onclick="window.location.href = 'https://img-9gag-fun.9cache.com/photo/3053_700bwp.webp%27%22%3E💸 Take my money :money_with_wings:</button>
-</div>
+<!-- Suppression des cookies -->
+<form action="index.php" method="post">
+    <div class="erase-data">
+        <button type="submit" class="btn" name="erase-data">:x: Effacer mon profil :x:</button>
+    </div>
+</form>
+
+<!-- Redirection vers le secret de l'amour, l'univers et tout le reste -->
+<form action="" method="post">
+    <div class="redirect">
+        <button type="submit" class="btn" name="redirect-user" onclick="window.location.href = 'https://img-9gag-fun.9cache.com/photo/3053_700bwp.webp%27%22%3E'">💸 Take my money :money_with_wings:</button>
+    </div>
+</form>

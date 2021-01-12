@@ -27,7 +27,7 @@ require_once 'index_controller.php';
 
     <div class="d-flex text-white justify-content-center">
 
-      <form enctype="multipart/form-data" action="user.php" method="post" class="backGroundForm p-4"> 
+      <form enctype="multipart/form-data" action="lovers.php" method="post" class="backGroundForm p-4"> 
         <div>
           <label for="name">Nom</label>
         </div>
