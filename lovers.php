@@ -68,7 +68,7 @@ foreach ($catalog as $bachelorNumber => $bachelor) {
                 <img src="assets/img/coeur_vide.png" class="img-like" alt="coeur" width="50 rem">
                 </div>
             </div>
-        <?php }} ?>
+        <?php } ?>
 
     </div>
 

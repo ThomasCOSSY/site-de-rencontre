@@ -32,7 +32,7 @@ if (isset($_COOKIE["email"])) {
 }
 
 if (isset($_COOKIE["gender"])) {
-    echo "Sexe: " . $_COOKIE["gender"] . $br;
+    echo "Genre: " . $_COOKIE["gender"] . $br;
 } else {
     echo "⛔ Le sexe n'a pas été renseigné." . " Pour initialiser les données, c'est " . "<a href=\"index.php\">✨ Ici ✨</a>" . $br;
 }
