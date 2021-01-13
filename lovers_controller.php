@@ -6,8 +6,8 @@ $catalog = [
     "age" => "22",
     "zipcode" => "76600",
     "email" => "bg_du_havre@lamanu.fr",
-    "preference" => "Femme",
-    "gender" => "Homme",
+    "preference" => "femme",
+    "gender" => "homme",
     "picture" => "nicolas.jpg",
     "description" => "Si tu ressembles à Zero Two, tu m'intéresses aussi"]
 ,    
@@ -16,8 +16,8 @@ $catalog = [
     "age" => "40",
     "zipcode" => "76600",
     "email" => "optic4000@gmail.com",
-    "preference" => "Femme",
-    "gender" => "Homme",
+    "preference" => "femme",
+    "gender" => "homme",
     "picture" => "gerard.jpeg",
     "description" => "Je sais déjà que tu vas me taper dans l'oeil"]
 ,
@@ -26,8 +26,8 @@ $catalog = [
     "age" => "35",
     "zipcode" => "76600",
     "email" => "parmabarbe@batman.com",
-    "preference" => "Femme",
-    "gender" => "Homme",
+    "preference" => "femme",
+    "gender" => "homme",
     "picture" => "bruce.jpg",
     "description" => "Je ne dis pas que je suis Batman, juste qu'on l'a jamais vu en même temps que moi"]
 ,
@@ -36,8 +36,8 @@ $catalog = [
     "age" => "22",
     "zipcode" => "60420",
     "email" => "ouraipmaster@lamanu.fr",
-    "preference" => "Femme",
-    "gender" => "Homme",
+    "preference" => "femme",
+    "gender" => "homme",
     "picture" => "alexis.jpg",
     "description" => "A la recherche de ma dulcinée pour partager des Mc Wraps en tête à tête. Fan de js, s'abstenir."]
 ,
@@ -46,8 +46,8 @@ $catalog = [
     "age" => "33",
     "zipcode" => "75002",
     "email" => "apple4ever@lamanu.fr",
-    "preference" => "Homme",
-    "gender" => "Homme",
+    "preference" => "homme",
+    "gender" => "homme",
     "picture" => "jobs.jpg",
     "description" => "Votre temps est limité, ne le gâchez pas en menant une existence qui n'est pas la vôtre."]
 ,
@@ -56,8 +56,8 @@ $catalog = [
     "age" => "45",
     "zipcode" => "31000",
     "email" => "missamissa@lamanu.fr",
-    "preference" => "Homme",
-    "gender" => "Homme",
+    "preference" => "homme",
+    "gender" => "homme",
     "picture" => "ken.jpg",
     "description" => "Missa déteste war press, jamais cherché bisbille! La clé Ousséké la clé de mon keur? La!"]
 ,
@@ -66,8 +66,8 @@ $catalog = [
     "age" => "50",
     "zipcode" => "76600",
     "email" => "jaimechanter@hotmail.fr",
-    "preference" => "Homme",
-    "gender" => "Femme",
+    "preference" => "homme",
+    "gender" => "femme",
     "picture" => "mariah.jpg",
     "description" => "j'ai une grande passion pour Noel"]
 ,
@@ -76,8 +76,8 @@ $catalog = [
     "age" => "87",
     "zipcode" => "76600",
     "email" => "minitel@wanadoo.fr",
-    "preference" => "Homme",
-    "gender" => "Femme",
+    "preference" => "homme",
+    "gender" => "femme",
     "picture" => "amandine.jpg",
     "description" => "J'ai connu une époque sans internet"]
 ,
@@ -86,8 +86,8 @@ $catalog = [
     "age" => "56",
     "zipcode" => "76600",
     "email" => "monicaB@gmail.com",
-    "preference" => "Homme",
-    "gender" => "Femme",
+    "preference" => "homme",
+    "gender" => "femme",
     "picture" => "monica.jpg",
     "description" => "recherche homme sérieux"]
 ,
@@ -96,8 +96,8 @@ $catalog = [
     "age" => "25",
     "zipcode" => "40404",
     "email" => "loveisp0ison@lamanu.fr",
-    "preference" => "Homme",
-    "gender" => "Femme",
+    "preference" => "homme",
+    "gender" => "femme",
     "picture" => "ivy.jpg",
     "description" => "La dernière fleur que tu croisera sur ton chemin 🥀"]
 ,
@@ -106,8 +106,8 @@ $catalog = [
     "age" => "40",
     "zipcode" => "61302",
     "email" => "camouflage@lamanu.fr",
-    "preference" => "Femme",
-    "gender" => "Femme",
+    "preference" => "femme",
+    "gender" => "femme",
     "picture" => "chantal.jpg",
     "description" => "Là on me voit, là on me voit plus, on me voit, on me voit plus, on me voit un peu, on me voit plus, on me voit."]
 ,
@@ -116,11 +116,9 @@ $catalog = [
     "age" => "25",
     "zipcode" => "60420",
     "email" => "lovefarmers@lamanu.fr",
-    "preference" => "Femme",
-    "gender" => "Homme",
+    "preference" => "homme",
+    "gender" => "femme",
     "picture" => "ariana.jpg",
     "description" => "Hey guys, this is Ariana and I love french devs! Especially Alexandre!"]
 
 ];
-
-?>

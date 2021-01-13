@@ -2,43 +2,43 @@
 $br = "<br>";
 // Récupération des données saisies via les cookies
 if (isset($_COOKIE["name"])) {
-    echo "Nom: " . $_COOKIE["name"] . $br;
+    echo "";
 } else {
     echo "⛔ Le nom n'a pas été renseigné." . " Pour initialiser les données, c'est " . "<a href=\"index.php\">✨ Ici ✨</a>" . $br;
 }
 
 if (isset($_COOKIE["firstname"])) {
-    echo "Prénom: " . $_COOKIE["firstname"] . $br;
+    echo "";
 } else {
     echo "⛔ Le prénom n'a pas été renseigné." . " Pour initialiser les données, c'est " . "<a href=\"index.php\">✨ Ici ✨</a>" . $br;
 }
 
 if (isset($_COOKIE["age"])) {
-    echo "Âge: " . $_COOKIE["age"] . $br;
+    echo "";
 } else {
     echo "⛔ L'âge n'a pas été renseigné." . " Pour initialiser les données, c'est " . "<a href=\"index.php\">✨ Ici ✨</a>" . $br;
 }
 
 if (isset($_COOKIE["zipcode"])) {
-    echo "Code postal: " . $_COOKIE["zipcode"] . $br;
+    echo "";
 } else {
     echo "⛔ Le Code postal n'a pas été renseigné." . " Pour initialiser les données, c'est " . "<a href=\"index.php\">✨ Ici ✨</a>" . $br;
 }
 
 if (isset($_COOKIE["email"])) {
-    echo "Email: " . $_COOKIE["email"] . $br;
+    echo "";
 } else {
     echo "⛔ L'email n'a pas été renseigné." . " Pour initialiser les données, c'est " . "<a href=\"index.php\">✨ Ici ✨</a>" . $br;
 }
 
 if (isset($_COOKIE["gender"])) {
-    echo "Genre: " . $_COOKIE["gender"] . $br;
+    echo "";
 } else {
     echo "⛔ Le sexe n'a pas été renseigné." . " Pour initialiser les données, c'est " . "<a href=\"index.php\">✨ Ici ✨</a>" . $br;
 }
 
 if (isset($_COOKIE["preference"])) {
-    echo "Préférence: " . $_COOKIE["preference"] . $br;
+    echo "";
 } else {
     echo "⛔ La préférence n'a pas été renseignée." . " Pour initialiser les données, c'est " . "<a href=\"index.php\">✨ Ici ✨</a>" . $br;
 }
@@ -64,5 +64,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // On redirige vers index.php
     header('Location: index.php');
 }
-
-?>

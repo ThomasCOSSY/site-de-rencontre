@@ -17,53 +17,65 @@ require_once 'user_controller.php';
 </head>
 
 <body>
+    <div class="text-center">
+        <h1>Bonjour <?= $_COOKIE["firstname"] ?> ! Voici les éléments que vous nous avez confié:</h1>
+
+        <table class="d-flex justify-content-center m-5 table table-hover">
+            <tr>
+                <td>Nom:</td>
+                <td><?= $_COOKIE["name"] ?></td>
+            </tr>
+            <tr>
+                <td>Prénom:</td>
+                <td><?= $_COOKIE["firstname"] ?></td>
+            </tr>
+            <tr>
+                <td>Âge:</td>
+                <td><?= $_COOKIE["age"] ?></td>
+            </tr>
+            <tr>
+                <td>Code postal:</td>
+                <td><?= $_COOKIE["zipcode"] ?></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><?= $_COOKIE["email"] ?></td>
+            </tr>
+            <tr>
+                <td>Vous êtes un(e):</td>
+                <td><?= $_COOKIE["gender"] ?></td>
+            </tr>
+            <tr>
+                <td>Vous recherchez un(e):</td>
+                <td><?= $_COOKIE["preference"] ?></td>
+            </tr>
+        </table>
+        <!-- retourner à la page lovers.php -->
+        <form action="lovers.php">
+            <button type="submit" class="btn">Retourner aux célibataires</button>
+        </form>
+
+        <!-- Redirection vers le secret de l'amour, l'univers et tout le reste -->
+
+        <!-- <div class="redirect">
+            <button type="submit" class="btn btn-outline-warning" name="redirect-user" onclick="window.location.href = 'http://www.lesbisounours.fr/'">💸 Take my money :money_with_wings:</button>
+        </div> -->
+        <form action="specialgift.php" method="post">
+            <div class="">
+                <button type="submit" class="btn" name="specialgift">💸 Take my money 💸</button>
+            </div>
+        </form>
+
+        <!-- Suppression des cookies -->
+        <form action="user.php" method="post">
+            <div class="erase-data">
+                <button type="submit" class="btn" name="erase-data">❌ Effacer mon profil ❌</button>
+            </div>
+        </form>
 
 
-<h1>Bonjour <?= $_COOKIE["firstname"]?> ! Voici les éléments que vous nous avez confié :</h1>
 
-<table>
-    <tr>
-        <td>Nom :</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Prénom :</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Age :</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Code postal :</td>
-        <td></td>
-    </tr><tr>
-        <td>Email :</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Vous êtes un(e) :</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Vous recherchez un(e) :</td>
-        <td></td>
-    </tr>
-</table>
-
-<!-- Suppression des cookies -->
-<form action="user.php" method="post">
-    <div class="erase-data">
-        <button type="submit" class="btn" name="erase-data">:x: Effacer mon profil :x:</button>
     </div>
-</form>
-
-<!-- Redirection vers le secret de l'amour, l'univers et tout le reste -->
-
-    <div class="redirect">
-        <button type="submit" class="btn" name="redirect-user" onclick="window.location.href = 'https://img-9gag-fun.9cache.com/photo/3053_700bwp.webp%27%22%3E'">💸 Take my money :money_with_wings:</button>
-    </div>
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

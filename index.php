@@ -1,5 +1,9 @@
 <?php
 require_once 'index_controller.php';
+// Redirection vers lovers.php si les cookies sont déjà set
+if (!empty($_COOKIE)) {
+  header('Location: lovers.php');
+}
 ?>
 
 <!doctype html>
@@ -17,32 +21,32 @@ require_once 'index_controller.php';
 </head>
 
 <body>
-
   <div class="container-fluid">
     <div class="text-center mt-3">
-      <h1><i class=""></i>👨‍💻 Adopte un.e dev 👩‍💻</h1>
+      <h1><span class="yellow-bracket">{ </span>Adopte un.e dev<span class="yellow-bracket"> }</span></h1>
+      <div class="text fs-2"></div>
     </div>
     <div class="d-flex text-white justify-content-center">
       <form action="index.php" method="post" class="backGroundForm p-4" novalidate>
         <div class="form-group">
           <span class="text-danger"><?= $errorCheck["name"] ?></span>
-          <label for="name">Nom: </label>
+          <label for="name" class="font-weight-bold">Nom: </label>
           <input class="form-control" placeholder="Wonka" type="text" required name="name" value="<?= $userName ?>">
         </div>
 
         <div class="form-group">
           <span class="text-danger"><?= $errorCheck["firstname"] ?></span>
-          <label for="firstname">Prénom: </label>
+          <label for="firstname" class="font-weight-bold">Prénom: </label>
           <input class="form-control" placeholder="Willy" type="text" required name="firstname" value="<?= $userFirstName ?>">
         </div>
 
         <div class="form-group">
           <span class="text-danger"><?= $errorCheck["age"] ?></span>
-          <label for="age">Âge: </label>
+          <label for="age" class="font-weight-bold">Âge: </label>
           <input class="form-control" placeholder="18 ou +" type="number" required name="age" value="<?= $userAge ?>">
         </div>
 
-        <p><span class="text-danger"><?= $errorCheck["gender"] ?></span>Genre:</p>
+        <p class="font-weight-bold"><span class="text-danger"><?= $errorCheck["gender"] ?></span>Genre:</p>
         <div class="form-group">
           <input type="radio" name="gender" value="homme" <?= ($userGender === "homme") ? "checked" : "" ?>>
           <label for="homme">Homme</label>
@@ -52,17 +56,17 @@ require_once 'index_controller.php';
 
         <div class="form-group">
           <span class="text-danger"><?= $errorCheck["zipcode"] ?></span>
-          <label for="zipcode">Code postal: </label>
+          <label for="zipcode" class="font-weight-bold">Code postal: </label>
           <input class="form-control" placeholder="66666" type="text" required name="zipcode" value="<?= $userZipCode ?>">
         </div>
 
         <div class="form-group">
           <span class="text-danger"><?= $errorCheck["email"] ?></span>
-          <label for="email">E-mail: </label>
+          <label for="email" class="font-weight-bold">E-mail: </label>
           <input class="form-control" placeholder="willy.wonka@chocolate.com" type="email" required name="email" value="<?= $userEmail ?>">
         </div>
 
-        <p><span class="text-danger"><?= $errorCheck["preference"] ?></span>Vous recherchez:</p>
+        <p class="font-weight-bold"><span class="text-danger"><?= $errorCheck["preference"] ?></span>Vous recherchez:</p>
         <div class="form-group">
           <input type="radio" name="preference" value="homme" <?= ($userPreference === "homme") ? "checked" : "" ?>>
           <label for="homme">Homme</label>
@@ -70,13 +74,11 @@ require_once 'index_controller.php';
           <label for="femme">Femme</label>
         </div>
 
-        <input class="btnColor mb-5" name="submit" type="submit" value="Rencontrez nos célibataires 🌹">
+        <input class="btn font-weight-bold" name="submit" type="submit" value="Rencontrez nos célibataires 🌹">
 
       </form>
     </div>
   </div>
-
-
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -84,6 +86,8 @@ require_once 'index_controller.php';
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/d89aa1e4ce.js" crossorigin="anonymous"></script>
+  <!-- Script js -->
+  <script src="assets/script.js"></script>
 </body>
 
 </html>

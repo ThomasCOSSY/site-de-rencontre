@@ -147,17 +147,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-// NON (A ET B) = NON A OU NON B
-/* 
-   ET            OU
-A B R !R      !A !B R 
---------      -------
-0 0 0  1      0  0  1
-1 0 0  1      1  0  1
-0 1 0  1      0  1  1
-1 1 1  0      1  1  0
-*/
-
 // Mise en place des cookies
 // Les données sécurisées sont récupérées
 if (($error === 0) && ($_SERVER['REQUEST_METHOD'] == 'POST')) {
@@ -173,5 +162,3 @@ if (($error === 0) && ($_SERVER['REQUEST_METHOD'] == 'POST')) {
     // On redirige vers lovers.php
     header('Location: lovers.php');
 }
-
-
