@@ -2,7 +2,7 @@
 // Variables : set br et initialisation du comptage des erreurs
 $br = "<br>";
 $error = 0;
-
+// var_dump($_POST);
 // Initialisation du tableau de check des erreurs
 $errorCheck = [
     "name" => "",
@@ -81,7 +81,6 @@ function validateGenderField($var)
 {
     $validGender = array("homme", "femme");
     $var = cleanData($var);
-    if (!array_key_exists("gender", $_POST)) return false;
     if (empty($var)) return false;
     return in_array($var, $validGender);
 }
@@ -91,7 +90,6 @@ function validatePreferenceField($var)
 {
     $validPreference = array("homme", "femme");
     $var = cleanData($var);
-    if (!array_key_exists("preference", $_POST)) return false;
     if (empty($var)) return false;
     return in_array($var, $validPreference);
 }
@@ -134,20 +132,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $errorCheck["email"] = "✔";
     }
     // Check champ genre
-    if (!validateGenderField($_POST["gender"])) {
+    if (!array_key_exists("gender", $_POST) || !validateGenderField($_POST["gender"])) {
         $errorCheck["gender"] = "Genre non valide";
         $error++;
     } else {
         $errorCheck["gender"] = "✔";
     }
     // Check champ préférence
-    if (!validatePreferenceField($_POST["preference"])) {
+    if (!array_key_exists("preference", $_POST) || !validatePreferenceField($_POST["preference"])) {
         $errorCheck["preference"] = "Préférence non valide";
         $error++;
     } else {
         $errorCheck["preference"] = "✔";
     }
 }
+
+// NON (A ET B) = NON A OU NON B
+/* 
+   ET            OU
+A B R !R      !A !B R 
+--------      -------
+0 0 0  1      0  0  1
+1 0 0  1      1  0  1
+0 1 0  1      0  1  1
+1 1 1  0      1  1  0
+*/
 
 // Mise en place des cookies
 // Les données sécurisées sont récupérées
