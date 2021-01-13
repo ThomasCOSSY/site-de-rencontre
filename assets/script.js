@@ -103,7 +103,8 @@ const phrases = [
     'Chevron Love enclanché',
     'Let\'s go find your precious',
     'Que la force soit avec toi',
-    'La loi de l\'amour, c\'est moi'
+    'La loi de l\'amour, c\'est moi',
+    'Cours mon amour, cours !'
 ]
 
 const el = document.querySelector('.text')
