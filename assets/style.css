@@ -1,24 +1,46 @@
+/* Global */
 .backGroundForm {
     background-color: #193549;
 }
 
-form {
-    color: #7FFFBB;
+.btn {
+    background-color: #ffc51b;
+    border-radius: 15px;
 }
 
-.btn {
-    background-color: #FFC51B;
+.btn:hover {
+    box-shadow: 3px 3px 8px #757575;
+}
+
+/* Index */
+form {
+    color: #7fffbb;
+}
+
+/* User */
+.btn-user {
+    width: 15rem;
+    margin: 1rem 1rem;
 }
 
 td {
-    color: #7FFFBB;
+    color: #7fffbb;
+}
+
+/* Lovers */
+.card:hover {
+    box-shadow: 3px 3px 8px#7FFFBB;
+}
+
+.card {
+    background-color: #193549;
 }
 
 /* Scramble effect */
 
 body {
     background: #122738;
-    color: #7FFFBB;
+    color: #7fffbb;
     height: 100%;
 }
 
@@ -31,23 +53,15 @@ body {
 }
 
 .yellow-bracket {
-    color: #FFC51B;
+    color: #ffc51b;
 }
 
 .text {
     font-weight: 100;
     font-size: 28px;
-    color: #73F2F3;
+    color: #73f2f3;
 }
 
 .dud {
     color: #757575;
-}
-
-.card:hover {
-    box-shadow: 3px 3px 8px #73F2F3;
-}
-
-.card {
-    background-color: #193549;
 }

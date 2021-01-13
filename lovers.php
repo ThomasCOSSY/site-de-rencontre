@@ -56,19 +56,21 @@ require_once 'lovers_controller.php';
         if (isset($_COOKIE['preference']) && $_COOKIE['preference'] == $bachelor["gender"]) {
       ?>
           <div class="col-sm-2">
-            <div class="card mb-4" style="height: 40rem">
+            <div class="card mb-4">
               <div class="card-body">
                 <img src="assets/img/<?= $bachelor["picture"] ?>" class="card-img-top" alt="<?= $bachelor["firstname"] ?>">
                 <p class="card-title h5"><?= $bachelor["firstname"] . " " . $bachelor["name"] ?></p>
                 <p class="card-text"><?= $bachelor["age"] ?> ans</p>
                 <p class="card-text">Code postal : <?= $bachelor["zipcode"] ?></p>
-                <p class="card-text"><?= $bachelor["description"] ?></p>
+                <p class="card-text" style="height: 5rem"><?= $bachelor["description"] ?></p>
               </div>
-              <div class="row">
-                <div class="col d-flex flex-row-reverse">
-                  <img src="assets/img/coeur_vide.png" class="img-like" alt="coeur" width="50 rem">
+              <card class="footer">
+                <div class="row">
+                  <div class="col d-flex flex-row-reverse">
+                    <img src="assets/img/coeur_vide.png" class="img-like" alt="coeur" width="50 rem">
+                  </div>
                 </div>
-              </div>
+              </card>
             </div>
           </div>
       <?php }

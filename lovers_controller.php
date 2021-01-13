@@ -9,7 +9,7 @@ $catalog = [
     "preference" => "femme",
     "gender" => "homme",
     "picture" => "nicolas.jpg",
-    "description" => "Si tu ressembles à Zero Two, tu m'intéresses aussi"]
+    "description" => "Si tu ressembles à Zero Two, tu m'intéresses aussi."]
 ,    
     1 => ["name" => "Menvusa",
     "firstname" => "Gérard",
@@ -19,7 +19,7 @@ $catalog = [
     "preference" => "femme",
     "gender" => "homme",
     "picture" => "gerard.jpeg",
-    "description" => "Je sais déjà que tu vas me taper dans l'oeil"]
+    "description" => "Je sais déjà que tu vas me taper dans l'oeil 🤓."]
 ,
     2 => ["name" => "Bayne",
     "firstname" => "Bruce",
@@ -29,9 +29,9 @@ $catalog = [
     "preference" => "femme",
     "gender" => "homme",
     "picture" => "bruce.jpg",
-    "description" => "Je ne dis pas que je suis Batman, juste qu'on l'a jamais vu en même temps que moi"]
+    "description" => "Je ne dis pas que je suis Batman, juste qu'on l'a jamais vu en même temps que moi."]
 ,
-    3 => ["name" => "Neart",
+    3 => ["name" => "Traen",
     "firstname" => "Alexandre",
     "age" => "22",
     "zipcode" => "60420",
@@ -69,7 +69,7 @@ $catalog = [
     "preference" => "homme",
     "gender" => "femme",
     "picture" => "mariah.jpg",
-    "description" => "j'ai une grande passion pour Noel"]
+    "description" => "J'ai une grande passion pour Noël. Toute l'année. Tout le temps."]
 ,
     7 => ["name" => "Ozaur",
     "firstname" => "Amandine",
@@ -79,9 +79,9 @@ $catalog = [
     "preference" => "homme",
     "gender" => "femme",
     "picture" => "amandine.jpg",
-    "description" => "J'ai connu une époque sans internet"]
+    "description" => "J'ai connu une époque sans internet."]
 ,
-    8 => ["name" => "bellossi",
+    8 => ["name" => "Bellossi",
     "firstname" => "Monica",
     "age" => "56",
     "zipcode" => "76600",
@@ -89,7 +89,7 @@ $catalog = [
     "preference" => "homme",
     "gender" => "femme",
     "picture" => "monica.jpg",
-    "description" => "recherche homme sérieux"]
+    "description" => "Recherche homme sérieux. Les fans de Seigneur des anneaux, s'abstenir."]
 ,
     9 => ["name" => "Poirson",
     "firstname" => "Ivy",
@@ -99,7 +99,7 @@ $catalog = [
     "preference" => "homme",
     "gender" => "femme",
     "picture" => "ivy.jpg",
-    "description" => "La dernière fleur que tu croisera sur ton chemin 🥀"]
+    "description" => "La dernière fleur que tu croisera sur ton chemin 🥀."]
 ,
     10 => ["name" => "Cartapus",
     "firstname" => "Chantal",
@@ -109,7 +109,7 @@ $catalog = [
     "preference" => "femme",
     "gender" => "femme",
     "picture" => "chantal.jpg",
-    "description" => "Là on me voit, là on me voit plus, on me voit, on me voit plus, on me voit un peu, on me voit plus, on me voit."]
+    "description" => "Là on me voit, là on me voit plus, on me voit un peu, on me voit plus."]
 ,
     11 => ["name" => "Grande",
     "firstname" => "Ariana",

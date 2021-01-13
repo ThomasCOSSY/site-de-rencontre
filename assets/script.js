@@ -1,3 +1,12 @@
+// Mariah exit
+
+// function sayHi() {
+//     alert("On ne quitte pas une Mariah!");
+// }
+
+// let mariahBtn = document.querySelector("#exit-btn");
+// mariahBtn.addEventListener("click", sayHi);
+
 // Mise en place du système de like 
 
 let imgManip = document.querySelectorAll("img.img-like");

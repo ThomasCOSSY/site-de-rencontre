@@ -17,66 +17,64 @@ require_once 'user_controller.php';
 </head>
 
 <body>
-    <div class="text-center">
-        <h1>Bonjour <?= $_COOKIE["firstname"] ?> ! Voici les éléments que vous nous avez confié:</h1>
+    <div class="container-fluid">
+        <div class="text-center">
+            <h1>Bonjour <?= $_COOKIE["firstname"] ?> !</h1>
+            <h2> Voici les éléments que vous nous avez confié:</h2>
 
-        <table class="d-flex justify-content-center m-5 table table-hover">
-            <tr>
-                <td>Nom:</td>
-                <td><?= $_COOKIE["name"] ?></td>
-            </tr>
-            <tr>
-                <td>Prénom:</td>
-                <td><?= $_COOKIE["firstname"] ?></td>
-            </tr>
-            <tr>
-                <td>Âge:</td>
-                <td><?= $_COOKIE["age"] ?></td>
-            </tr>
-            <tr>
-                <td>Code postal:</td>
-                <td><?= $_COOKIE["zipcode"] ?></td>
-            </tr>
-            <tr>
-                <td>Email:</td>
-                <td><?= $_COOKIE["email"] ?></td>
-            </tr>
-            <tr>
-                <td>Vous êtes un(e):</td>
-                <td><?= $_COOKIE["gender"] ?></td>
-            </tr>
-            <tr>
-                <td>Vous recherchez un(e):</td>
-                <td><?= $_COOKIE["preference"] ?></td>
-            </tr>
-        </table>
-        <!-- retourner à la page lovers.php -->
-        <form action="lovers.php">
-            <button type="submit" class="btn">Retourner aux célibataires</button>
-        </form>
+            <table class="d-flex justify-content-center m-5 table-hover">
+                <tr class="d-flex flex-row">
+                    <td>Nom:</td>
+                    <td><?= $_COOKIE["name"] ?></td>
+                </tr>
+                <tr class="d-flex flex-row">
+                    <td>Prénom:</td>
+                    <td><?= $_COOKIE["firstname"] ?></td>
+                </tr>
+                <tr class="d-flex flex-row">
+                    <td>Âge:</td>
+                    <td><?= $_COOKIE["age"] ?></td>
+                </tr>
+                <tr class="d-flex flex-row">
+                    <td>Code postal:</td>
+                    <td><?= $_COOKIE["zipcode"] ?></td>
+                </tr>
+                <tr class="d-flex flex-row">
+                    <td>Email:</td>
+                    <td><?= $_COOKIE["email"] ?></td>
+                </tr>
+                <tr class="d-flex flex-row">
+                    <td>Vous êtes un(e):</td>
+                    <td><?= $_COOKIE["gender"] ?></td>
+                </tr>
+                <tr class="d-flex flex-row">
+                    <td>Vous recherchez un(e):</td>
+                    <td><?= $_COOKIE["preference"] ?></td>
+                </tr>
+            </table>
+            <div class="d-flex flex-row justify-content-center">
+                <!-- retourner à la page lovers.php -->
+                <form action="lovers.php">
+                    <button type="submit" class="btn btn-user">Retourner aux célibataires</button>
+                </form>
 
-        <!-- Redirection vers le secret de l'amour, l'univers et tout le reste -->
-
-        <!-- <div class="redirect">
-            <button type="submit" class="btn btn-outline-warning" name="redirect-user" onclick="window.location.href = 'http://www.lesbisounours.fr/'">💸 Take my money :money_with_wings:</button>
-        </div> -->
-        <form action="specialgift.php" method="post">
-            <div class="">
-                <button type="submit" class="btn" name="specialgift">💸 Take my money 💸</button>
+                <!-- Redirection vers le secret de l'amour, l'univers et tout le reste -->
+                <form action="specialgift.php" method="post">
+                    <div class="">
+                        <button type="submit" class="btn btn-user" name="specialgift">💸 Take my money 💸</button>
+                    </div>
+                </form>
             </div>
-        </form>
-
-        <!-- Suppression des cookies -->
-        <form action="user.php" method="post">
-            <div class="erase-data">
-                <button type="submit" class="btn" name="erase-data">❌ Effacer mon profil ❌</button>
+            <div>
+                <!-- Suppression des cookies -->
+                <form action="user.php" method="post">
+                    <div class="erase-data">
+                        <button type="submit" class="btn btn-user" name="erase-data">❌ Effacer mon profil ❌</button>
+                    </div>
+                </form>
             </div>
-        </form>
-
-
-
+        </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
